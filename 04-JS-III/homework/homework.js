@@ -17,7 +17,6 @@ function devolverUltimoElemento(array) {
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
- 
   return array.length;
 }
 
@@ -27,7 +26,12 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  var matriz =[]
+  for (var i = 0 ;  i < array.length ; i++){
+    matriz.push(array[i]+1);
+  }return matriz;
 }
+
 
 
 function agregarItemAlFinalDelArray(array, elemento) {
@@ -72,18 +76,22 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
-  var suma = 0
-  for (var i=0; <numeros.length -1;  1++){
-     suma === suma(numeros[i++])
-   } return suma;
-}
+  var suma =0;
+  for (var i=0; i <numeros.length ; i++){
+    suma += numeros[i]
+  } return suma;
+} 
+
 
 
 function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
- 
+ var suma = 0
+ for (var i = 0 ;  i < resultadosTest.length; i++){
+   suma += (resultadosTest[i]);
+ }return suma / resultadosTest.length
 }
 
 
@@ -91,21 +99,37 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-
+var mayor = Math.max.apply(null, numeros);{
+  return mayor;
+}
 }
 
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
-  // Escribe tu código aquí:
+  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+  // Escribe tu código aquí
+var acumulador = 1
+  if (arguments.length === 0) return 0
+  else if (arguments.length === 1) return arguments[0]
+  else{
+    for ( var i = 0; i < arguments.length ; i++){
+      acumulador *= (arguments[i])
+    }
+  }return acumulador;
 }
+  
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
+var contador = 0
+   for (var i = 0 ; i < arreglo.length ; i++){
+     if (arreglo[i] > 18){
+       contador = contador +1
+     }
+   }return contador;
 }
 
 
