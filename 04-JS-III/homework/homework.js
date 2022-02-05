@@ -3,18 +3,22 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
+  return array [0];
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+  return array[array.length-1];
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+ 
+  return array.length;
 }
 
 
@@ -41,7 +45,7 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // Pista: usa el método `.unshift`
   // Tu código:
   array.unshift(elemento);
-  return array
+  return array;
 }
 
 
@@ -51,17 +55,16 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  array(palabras)
-  return palabras.join["Hola" + " " + "world!"]
+   var str = palabras.join(' ');
+   return str;
 }
-
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-  for (var i:0:  i:array.length: i++)
-     array
+ var truefalse = array.includes(elemento);
+ return truefalse;
 }
 
 
@@ -69,6 +72,10 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  var suma = 0
+  for (var i=0; <numeros.length -1;  1++){
+     suma === suma(numeros[i++])
+   } return suma;
 }
 
 
@@ -84,9 +91,7 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-  var mas grande
-  for (var i=0; numeros.length; i++)
-  if (numero)
+
 }
 
 
