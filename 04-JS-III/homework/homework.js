@@ -99,11 +99,15 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-var mayor = Math.max.apply(null, numeros);{
-  return mayor;
+  var contenedor =[0]
+  for (var i = 0 ; i <numeros.length -1 ; i++ ){
+    if (numeros[i] > numeros[0] && numeros[i] > contenedor[0]){
+      contenedor = numeros[i]
+    }else if (numeros[i] > contenedor[0]){
+      contenedor += numeros[i]
+    }  
+  }return contenedor;
 }
-}
-
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
@@ -209,6 +213,20 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var nuevoarray = [];
+  var suma = numero;
+  for ( var i = 0; i < 10 ; i++){
+    suma = suma + 2;
+    if (suma === i)break;
+    else{
+      nuevoarray.push(suma);
+    }
+  }if (i < 10){
+    return "Se interrumpió la ejecución"
+  }
+   else{
+     return nuevoarray;
+   } 
 }
 
 
@@ -219,6 +237,16 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var arrayDevolucion = []
+  var suma = numero;
+  for ( var i= 0; i < 10; i++){
+    if(i === 5)continue;
+    else{
+      (suma = suma + 2)
+      arrayDevolucion.push(suma);
+    }
+  }
+  return arrayDevolucion;
 }
 
 
